@@ -94,6 +94,7 @@ results_baseline_allow_all.json  scorecard de la baseline allow-all du kit (scor
 | [app/README.md](app/README.md) | Chaque module de la défense, module par module |
 | [tests/README.md](tests/README.md) | Ce qui est testé — et ce qui ne l'est pas |
 | [artifacts/README.md](artifacts/README.md) | Format des traces, comment les lire |
+| [docs/DEMO_VIDEO_GUIDE.md](docs/DEMO_VIDEO_GUIDE.md) | Production de la vidéo de démo (trace réelle + B-roll Google Flow) |
 
 ## Observabilité
 
