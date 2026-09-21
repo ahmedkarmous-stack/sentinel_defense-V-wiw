@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+  body { margin:0; background:#0b1220; color:#e8ecf4;
+         font-family:-apple-system,Segoe UI,Roboto,sans-serif; }
+  .slide { width:1920px; height:1080px; display:flex; flex-direction:column;
+           justify-content:center; padding:0 180px; box-sizing:border-box;
+           border-bottom:1px solid #1e2a4a; }
+  h1 { font-size:96px; margin:0 0 24px; letter-spacing:-2px; }
+  h2 { font-size:64px; margin:0 0 32px; color:#d4a24e; }
+  p  { font-size:40px; line-height:1.5; color:#a8b3cc; margin:0 0 16px; }
+  .kicker { font-size:28px; letter-spacing:6px; color:#d4a24e;
+            text-transform:uppercase; margin-bottom:32px; }
+  li { font-size:38px; line-height:1.6; color:#a8b3cc; margin-bottom:18px; }
+  code { color:#60a5fa; font-family:monospace; }
+</style></head><body>
+
+<div class="slide">
+  <div class="kicker">IndabaX Tunisia 2026 · SENTINEL</div>
+  <h1>Taint Graph +<br>Intent Divergence</h1>
+  <p>A per-action defense for tool-using LLM agents</p>
+</div>
+
+<div class="slide">
+  <h2>The problem</h2>
+  <p>The request the defense sees is a <em>sliding window</em>.</p>
+  <p>An attack planted 20 steps ago is outside it —<br>
+     which is exactly where memory poisoning hides.</p>
+</div>
+
+<div class="slide">
+  <h2>The approach</h2>
+  <p>A provenance graph that <strong>persists per run</strong>,<br>
+     so distrust survives outside the window.</p>
+  <p>Five signals — trust, taint, divergence, sensitivity,<br>
+     reversibility — fused into one calibrated risk score.</p>
+</div>
+
+<div class="slide">
+  <h2>Honest limits</h2>
+  <ul>
+    <li>The kit's provenance baseline scores <code>0.988302</code> —
+        ours <code>0.988437</code>. One ten-thousandth apart.</li>
+    <li>Redaction is regex-based: reversed, spaced or split
+        secrets are not caught by that pattern.</li>
+    <li>All runs shown use <code>--model mock</code>, which is
+        more credulous than Qwen3-8B.</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h2>What it does <em>not</em> claim</h2>
+  <p>Not complete security.</p>
+  <p>A defense that constrains what an agent may <strong>do</strong><br>
+     with untrusted content — without refusing to read it.</p>
+</div>
+
+</body></html>
