@@ -87,10 +87,4 @@ results_ablation_no_taint.json   scorecard sans taint graph (score: 0.819) — p
 | Défense complète | 0.978 | 1.0 | 1.0 | 0.914 |
 | Sans taint graph | 0.819 | 0.8 | 0.895 | 0.960 |
 
-## À faire
 
-- [ ] Observability layer (trace viewer)
-- [ ] Tests unitaires (`tests/`)
-- [ ] Rapport technique
-- [ ] Vidéo de démonstration
-- [ ] Test contre `--model qwen3-8b` (le mock model est plus crédule que le vrai)
